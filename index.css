@@ -1,0 +1,440 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    max-width: 425px;
+}
+
+/*header*/
+
+#header{
+    text-align: center;
+    padding-top: 1em;
+}
+
+#emplacement{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 7px 0px;
+    background-color: #eaeaea;
+}
+
+#localisation{
+    width: 15px;
+    height: 15px;
+    margin-top: 17px;
+    margin-right: 15px;
+}
+
+#explorer{
+    background-color: #f6f6f6;
+    padding: 16px 42.5px;
+}
+
+#bouton_explorer, #bouton_commander{
+    padding: 20px 0px;
+    color: white;
+    background-image: linear-gradient(to right bottom, #e972da, #da6bdb, #ca66db, #b860dc, #a55cdc);
+    border-radius: 30px;
+}
+
+#bouton_explorer{
+    width: 75.9%;
+    margin: 30px auto;
+    margin-top: 30px;
+}
+
+/*Fonctionnement*/
+
+#fonctionnement{
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+.titre_article{
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+.bouton_fonctionnement{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 86.7%;
+    padding: 10px 0px;
+    margin: 25px auto;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px #AAAAAA;
+}
+
+.bouton_fonctionnement:hover, .logo_fonctionnement:hover{
+    background-color: #f5edff;
+}
+
+.bouton_fonctionnement:hover .logo_fonctionnement{
+    color: #9356dc;
+}
+
+.nombres_fonctionnement{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: -10px;
+    font-size: 15px;
+    color: white;
+    background-color: #9356dc;
+    border-radius: 45px;
+}
+
+.logo_fonctionnement{
+    width: 15px;
+    height: 20px;
+    margin-top: 15px;
+    margin-right: 20px;
+    margin-left: 30px;
+}
+
+.titre_boutons{
+    margin-right: 70px;
+}
+
+/*restaurants*/
+
+#restaurants{
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 65px;
+    background-color: #f2f2f2;
+}
+
+.balise_restaurant{
+    width: 90%;
+    margin: 15px auto;
+    border-radius: 10px;
+    background-color: white;
+    padding-bottom: 0.5em;
+    position: relative;
+}
+
+.nouveau{
+    padding: 5px 10px;
+    background-color: #99e2d0;
+    color: #008766;
+    position: absolute;
+    right: 15px;
+}
+
+.images_restaurants{
+    width: 100%;
+    height: 175px;
+    border-radius: 10px 10px 0px 0px;
+    object-fit: cover;
+}
+
+.banierre_restaurants{
+    line-height: 40%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.logo_restaurant{
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.petit_logo_contour_coeur{
+    width: 20px;
+    height: 25px;
+    color: #2e2e2e;
+}
+
+.social{
+    width: 20px;
+    height: 25px;
+    position: relative;
+    top: 25px;
+}
+
+img{
+    width: 20px;
+    height: 25px;
+    z-index: 1;
+}
+
+.fond{
+    bottom: 0px;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 2;
+}
+
+.coeur{
+    width: 20px;
+    height: 0px;
+    color: #ad5fdb;
+    transition: linear .4s;
+    z-index: 3;
+}
+
+.balise_restaurant:hover .coeur{
+    height: 25px;
+    transition: linear .4s;
+}
+
+/*footer*/
+
+footer{
+    width: 100%;
+    background-color: #333333;
+    line-height: 70%;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+#ensemble_textes_footer{
+    margin-left: 25px;
+}
+
+#ohmyfood_footer{
+    color: white;
+}
+
+.flex_footer{
+    display: flex;
+    height: 28px;
+}
+
+.logos_footer{
+    width: 15px;
+    height: 15px;
+    margin-top: 15px;
+    margin-right: 10px;
+    color: white;
+}
+
+.texte_footer{
+    color: white;
+}
+
+
+/*Page pour les restaurants*/
+
+/*header pour les restaurants*/
+
+.header_restaurant{
+    width: 100%;
+    max-width: 425px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.retour_page_precedente{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    color: black;
+}
+
+
+/*Logo du coeur à côté du titre du restaurant*/
+
+.class_titre_restaurant{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo_contour_coeur_titre{
+    width: 25px;
+    height: 25px;
+    padding-top: 55px;
+    padding-right: 40px;
+}
+
+/*Grande image*/
+
+#image_arriere_fond{
+    width: 100%;
+    max-width: 425px;
+    height: 255px;
+    position: absolute;
+    z-index: 1;
+    object-fit: cover;
+}
+
+/*Carte, Menu*/
+
+#article_menu_restaurant{
+    padding-bottom: 64px;
+    background-color: #f6f6f6;
+    border-radius: 30px 30px 0px 0px;
+    z-index: 2;
+    position: relative;
+    top: 225px;
+}
+
+#titre_restaurant{
+    padding-left: 15px;
+    padding-top: 35px;
+    border-radius: 50px 50px 0px 0px;
+}
+
+.menu_titre{
+    width: 40px;
+    height: 25px;
+    margin-left: 20px;
+    font-size: 19.2px;
+    border-bottom: 4px solid #99e2d0;
+}
+
+.menu_plat{
+    margin-bottom: 40px;
+}
+
+.balise_plat{
+    width: 92%;
+    padding: 0.1px 0px;
+    margin: 15px auto;
+    background-color: white;
+    box-shadow: 0px 5px 10px #AAAAAA;
+    border-radius: 10px;
+    position: relative;
+    transition: 0.3s all linear;
+    overflow: hidden;
+}
+
+.balise_plat::before {
+  width: 0%;
+  height: 100%;
+  top: 0px;
+  right: 0px;
+  background: #99e2d0;
+  content: "";
+  position: absolute;
+  transition: all 0.3s linear;
+}
+
+.balise_plat::after{
+    width: 12px;
+    height: 12px;
+    padding: 1px 3px 4px 3px;
+    border-radius: 25px;
+    top: 37%;
+    right: -20px;
+    background-color: white;
+    content: url('MaquettesOhmyfood/images/petits_logos/check.svg');
+    position: absolute;
+    transition: all 0.3s;
+    visibility: hidden;
+}
+
+.balise_plat:hover::before {
+  width: 60px;
+}
+
+.balise_plat:hover::after{
+    width: 12px;
+    right: 20px;
+    transform: rotate(360deg);
+    visibility: visible;
+}
+
+.titre_plat{
+    font-size: 16px;
+    height: 10px;
+}
+
+.description_plat{
+    font-size: 12.8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.titre_plat, .description_plat{
+    margin-left: 10px;
+}
+
+mark{
+    background-color: white;
+    font-size: 12.8px;
+    font-weight: bold;
+    margin-right: 20px;
+    transition: .3s linear;
+}
+
+.balise_plat:hover mark{
+    margin-right: 80px;
+    transition: .3s linear;
+}
+
+/*Bouton commander*/
+
+#bouton_commander{
+    width: 49.3%;
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/*footer*/
+
+.footer{
+    width: 100%;
+    background-color: #333333;
+    line-height: 70%;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    position: relative;
+    z-index: 3;
+    top: 228px;
+}
+
+/*Ecriture*/
+
+@font-face{
+    font-family: 'roboto_medium';
+    src: url('Police/roboto/Roboto-Medium.ttf');
+}
+
+@font-face{
+    font-family: 'roboto_thin';
+    src: url('Police/roboto/Roboto-Thin.ttf');
+}
+
+@font-face{
+    font-family: 'roboto_italic';
+    src: url('Police/roboto/Roboto-ThinItalic.ttf');
+}
+
+@font-face{
+    font-family: 'Shrikland';
+    src: url('Police/shrikhand/Shrikhand-Regular.otf');
+}
+
+.roboto_light, .ecriture_restaurant, .description_plat{
+    font-family: 'roboto-thin';
+}
+
+.roboto_bold, .titre_boutons, .titre_article, .titre_boutons, .titre_plat, .bouton_commander, mark{
+    font-family: 'roboto_medium';
+}
+
+.menu_titre{
+    font-family: 'roboto_italic';
+}
+
+#titre_restaurant{
+    font-family: 'Shrikland';
+}
