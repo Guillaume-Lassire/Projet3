@@ -1,7 +1,7 @@
 body{
     margin: 0px;
     padding: 0px;
-    max-width: 425px;
+    max-width: 700px;
 }
 
 /*header*/
@@ -42,6 +42,11 @@ body{
     width: 75.9%;
     margin: 30px auto;
     margin-top: 30px;
+}
+
+#bouton_explorer:hover, #bouton_commander:hover{
+    box-shadow: 0px 5px 5px rgba(156, 156, 156, 0.712);
+    transition: .3s linear;
 }
 
 /*Fonctionnement*/
@@ -190,6 +195,11 @@ img{
     transition: linear .4s;
 }
 
+.balise_restaurant:hover .petit_logo_contour_coeur{
+    visibility: hidden;
+    transition: linear .4s;
+}
+
 /*footer*/
 
 footer{
@@ -232,7 +242,6 @@ footer{
 
 .header_restaurant{
     width: 100%;
-    max-width: 425px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -267,7 +276,6 @@ footer{
 
 #image_arriere_fond{
     width: 100%;
-    max-width: 425px;
     height: 255px;
     position: absolute;
     z-index: 1;
