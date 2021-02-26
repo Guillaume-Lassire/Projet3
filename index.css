@@ -1,7 +1,100 @@
 body{
     margin: 0px;
     padding: 0px;
-    max-width: 700px;
+}
+
+/*Ecriture*/
+
+@font-face{
+    font-family: 'roboto_medium';
+    src: url('Police/roboto/Roboto-Medium.ttf');
+}
+
+@font-face{
+    font-family: 'roboto_thin';
+    src: url('Police/roboto/Roboto-Thin.ttf');
+}
+
+@font-face{
+    font-family: 'roboto_italic';
+    src: url('Police/roboto/Roboto-ThinItalic.ttf');
+}
+
+@font-face{
+    font-family: 'Shrikland';
+    src: url('Police/shrikhand/Shrikhand-Regular.otf');
+}
+
+.roboto_light, .ecriture_restaurant, .description_plat{
+    font-family: 'roboto-thin';
+}
+
+.roboto_bold, .titre_boutons, .titre_article, .titre_boutons, .titre_plat, .bouton_commander, mark{
+    font-family: 'roboto_medium';
+}
+
+.menu_titre{
+    font-family: 'roboto_italic';
+}
+
+#titre_restaurant{
+    font-family: 'Shrikland';
+}
+
+/*loader*/
+#loader{
+    background-color: white;
+    color: black;
+    position: fixed;
+    min-height: 100%;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: disparition 3s linear forwards;
+}
+
+span{
+    width: 35px;
+    height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    margin-right: 20px;
+}
+
+#loader_bars:before, #loader_bars:after, #loader_bars span{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 10px;
+    height: 35px;
+    background-color: black;
+    animation: chargement 1s linear infinite;
+}
+
+#loader_bars:after{
+    left: 15px;
+    animation-delay: .33s;
+}
+
+#loader_bars span{
+    left: 30px;
+    animation-delay: .66s;
+}
+
+
+@keyframes chargement{
+    0% {transform: scaleY(0); opacity: 0;}
+    50% {transform: scaleY(1); opacity: 1;}
+    100% {transform: scaleY(0); opacity: 0;}
+}
+
+@keyframes disparition{
+    0% {opacity: 1; z-index: 1;}
+    100% {opacity: 0; z-index: 0;}
 }
 
 /*header*/
@@ -40,6 +133,7 @@ body{
 
 #bouton_explorer{
     width: 75.9%;
+    max-width: 400px;
     margin: 30px auto;
     margin-top: 30px;
 }
@@ -61,7 +155,14 @@ body{
     margin-bottom: 30px;
 }
 
+#ensemble_boutons_fonctionnement{
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+}
+
 .bouton_fonctionnement{
+    max-width: 433.5px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -109,6 +210,11 @@ body{
 
 /*restaurants*/
 
+a{
+    text-decoration: none;
+    color: black;
+}
+
 #restaurants{
     width: 100%;
     padding-top: 50px;
@@ -116,8 +222,15 @@ body{
     background-color: #f2f2f2;
 }
 
+#groupe_restaurants, .menu_plat{
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+}
+
 .balise_restaurant{
     width: 90%;
+    max-width: 450px;
     margin: 15px auto;
     border-radius: 10px;
     background-color: white;
@@ -190,12 +303,12 @@ img{
     z-index: 3;
 }
 
-.balise_restaurant:hover .coeur{
+.fond:hover .coeur{
     height: 25px;
     transition: linear .4s;
 }
 
-.balise_restaurant:hover .petit_logo_contour_coeur{
+.social:hover .petit_logo_contour_coeur{
     visibility: hidden;
     transition: linear .4s;
 }
@@ -210,12 +323,10 @@ footer{
     padding-bottom: 15px;
 }
 
-#ensemble_textes_footer{
-    margin-left: 25px;
-}
-
 #ohmyfood_footer{
     color: white;
+    width: 120px;
+    height: 40px;
 }
 
 .flex_footer{
@@ -234,8 +345,23 @@ footer{
 .texte_footer{
     color: white;
 }
+/*media queries telephone*/
+@media screen and (max-width: 720px)
+{
+#ensemble_textes_footer{
+    margin-left: 25px;
+}
+}
 
-
+/*media queries desktop*/
+@media screen and (min-width: 721px)
+{
+ #ensemble_textes_footer{
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+}
 /*Page pour les restaurants*/
 
 /*header pour les restaurants*/
@@ -313,6 +439,7 @@ footer{
 
 .balise_plat{
     width: 92%;
+    max-width: 400px;
     padding: 0.1px 0px;
     margin: 15px auto;
     background-color: white;
@@ -391,6 +518,7 @@ mark{
 
 #bouton_commander{
     width: 49.3%;
+    max-width: 400px;
     margin: auto;
     text-align: center;
     margin-top: 50px;
@@ -407,42 +535,4 @@ mark{
     position: relative;
     z-index: 3;
     top: 228px;
-}
-
-/*Ecriture*/
-
-@font-face{
-    font-family: 'roboto_medium';
-    src: url('Police/roboto/Roboto-Medium.ttf');
-}
-
-@font-face{
-    font-family: 'roboto_thin';
-    src: url('Police/roboto/Roboto-Thin.ttf');
-}
-
-@font-face{
-    font-family: 'roboto_italic';
-    src: url('Police/roboto/Roboto-ThinItalic.ttf');
-}
-
-@font-face{
-    font-family: 'Shrikland';
-    src: url('Police/shrikhand/Shrikhand-Regular.otf');
-}
-
-.roboto_light, .ecriture_restaurant, .description_plat{
-    font-family: 'roboto-thin';
-}
-
-.roboto_bold, .titre_boutons, .titre_article, .titre_boutons, .titre_plat, .bouton_commander, mark{
-    font-family: 'roboto_medium';
-}
-
-.menu_titre{
-    font-family: 'roboto_italic';
-}
-
-#titre_restaurant{
-    font-family: 'Shrikland';
 }
