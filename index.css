@@ -448,6 +448,7 @@ footer{
     position: relative;
     transition: 0.3s all linear;
     overflow: hidden;
+    transition: all 0.3s linear;
 }
 
 .balise_plat::before {
@@ -488,13 +489,33 @@ footer{
 
 .titre_plat{
     font-size: 16px;
-    height: 10px;
+    height: 20px;
+    max-width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    z-index: 1;
+}
+
+.balise_plat:hover .titre_plat{
+    padding-right: 60px;
+    transition: all 0.3s linear;
+}
+
+.balise_description{
+    display: flex;
+    justify-content: space-between;
+    min-width: 0px;
+    align-items: center;
+    height: 25px;
+    padding-bottom: 10px;
 }
 
 .description_plat{
     font-size: 12.8px;
-    display: flex;
-    justify-content: space-between;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .titre_plat, .description_plat{
@@ -507,6 +528,7 @@ mark{
     font-weight: bold;
     margin-right: 20px;
     transition: .3s linear;
+    flex-shrink: 0;
 }
 
 .balise_plat:hover mark{
